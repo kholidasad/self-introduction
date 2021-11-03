@@ -69,9 +69,12 @@
           aburger.style.color="black";
           for (i=0; i < aleft.length; i++) {
             aleft[i].style.color="rgb(0, 0, 0)";
-            afoot[i].style.color="black";
+            // afoot[i].style.color="black";
             // anv[i].style.color="rgb(0, 0, 0)";
             // aburger[i].style.color="rgb(0, 0, 0)";
+          }
+          for(i=0;i<afoot.length;i++){
+            afoot[i].style.color="rgb(0, 0, 0)";
           }
         }
         else if (btn.innerHTML === '<i class="fas fa-sun"></i>') {
@@ -81,9 +84,12 @@
           aburger.style.color="rgb(247, 247, 247)";
           for (i=0; i < aleft.length; i++) {
             aleft[i].style.color="rgb(247, 247, 247)";
-            afoot[i].style.color="white";
+            // afoot[i].style.color="white";
             // anv[i].style.color="rgb(247, 247, 247)";
             // aburger[i].style.color="rgb(247, 247, 247)";
+          }
+          for(i=0;i<afoot.length;i++){
+            afoot[i].style.color="rgb(247, 247, 247)";
           }
         }
 
@@ -194,6 +200,8 @@
                             <h2>Contact Me</h2>
                             <label for="name">Nama</label>
                             <input type="text" id="nama" required class="form-control" placeholder="Please insert your name">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required class="form-control" placeholder="Please insert your email">
                             <label for="name">Message</label>
                             <textarea name="message" id="message" cols="30" rows="2" required class="form-control" placeholder="Let's collab!"></textarea>
                             <span class="btn message" style="margin-bottom: 15px;">Send</span>
@@ -212,7 +220,7 @@
             <a href="https://linkedin.com/in/khalidalasad" style="text-decoration: none; color: black;" target="blank"><span class="fab fa-linkedin"></span></a>
             <a href="https://github.com/kholidasad" style="text-decoration: none; color: black;" target="blank"><span class="fab fa-github"></span></a>
             <a href="https://instagram.com/kholidasad" style="text-decoration: none; color: black;" target="blank"><span class="fab fa-instagram"></span></a>
-          <p style="align-items: center; text-align: center;">Created by Khalid Al Asad</p>
+          <p style="text-align: center;">Created by Khalid Al Asad | Image by <a href="https://unsplash.com" style="font-size: 14px;" target="blank">Unsplash</a></p>
         </div>
     </div>
   </body>
