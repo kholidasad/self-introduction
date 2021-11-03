@@ -1,0 +1,269 @@
+* {
+   box-sizing: border-box;
+}
+
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    color: #777;
+    transition:  background 1s;
+}
+
+.dark-mode {
+    color: white;
+    background-color: rgb(49, 49, 49);
+}
+
+.clear {
+    clear: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.container {
+    display: flex;
+}
+
+.header {
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    transition: background 1s;
+}
+
+.header-left {
+    float: left;
+}
+
+.header-left a {
+    line-height: 50px;
+    padding: 0 15px;
+    display: block;
+    float: left;
+    transition: all 0.5s;
+}
+
+.header-left a:hover {
+    background-color: rgba(212, 211, 211, 0.3);
+  }
+
+.header-right {
+    float: right;
+}
+
+.home {
+    padding: 160px 0 350px 0;
+    background-image: url(img/5.png);
+    background-size: cover;
+}
+
+.home h1 {
+    font-size: 100px;
+}
+
+.home h2 {
+    font-size: 50px;
+    margin-top: -20px;
+}
+
+.aboutme, .education, .work, .contact {
+    padding: 160px 0 250px 0;
+    display: flex;
+}
+
+.aboutme img{
+    float: right;
+}
+
+.education h2 {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
+
+.education h3, .education p {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
+
+.work img {
+    float: right;
+}
+
+.contact h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+label {
+    margin-top: 10px;
+}
+
+.contact input {
+    width: 50%;
+}
+
+.contact textarea {
+    width: 50%;
+}
+
+.message {
+    padding: 15px 40px;
+    margin-top: 20px;
+    background-color: #b4b4b4;
+    cursor: pointer;
+    box-shadow: 0 3px rgb(230, 230, 230);
+}
+  
+.message:active {
+    position: relative;
+    top: 7px;
+    box-shadow: none;
+}
+
+.footer {
+    background: rgb(230, 230, 230);
+    width: 100%;;
+    position: absolute;
+    z-index: 10;
+    transition: background 1s;
+}
+
+.footer-left {
+    float: left;
+    margin: 10px 30px 15px 30px;
+}
+
+.footer-left span {
+    margin: 0 15px 20px 0;
+}
+
+.footer-left a {
+    font-size: 30px;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    background-color: rgb(235, 235, 235);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 100px;
+}
+
+.sidenav a {
+    padding: 20px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #535353;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media all and (max-width: 1000px) {
+    .education h3 {
+        font-size: 20px;
+    }
+}
+
+@media all and (max-width: 670px) { 
+    .header-left {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 25px;
+        position: fixed;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+
+    .home {
+        padding: 100px 0 180px 0;
+        background-image: none;
+    }
+
+    .home h2 {
+        font-size: 30px;
+    }
+
+    .aboutme, .education, .work, .contact {
+        margin: 10px 0;
+        padding: 200px 0;
+    }
+
+    .education h2 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    
+    .education h3, .education p {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact input {
+        width: 100%;
+    }
+
+    .contact textarea {
+        width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

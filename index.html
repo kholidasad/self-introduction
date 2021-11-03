@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myself</title>
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(function() {
+        AOS.init();
+      });
+    </script>
+    <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+      
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
+    <script>
+      function openNav() {
+        document.getElementById("sidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("sidenav").style.width = "0";
+      }
+      function myFunction() {
+        var element = document.body;
+        var btn = document.getElementById("btndark");
+        const left = document.getElementById("header");
+        const aleft = left.getElementsByTagName("a");
+        const footer = document.getElementById("footer");
+        const afoot = footer.getElementsByTagName("a");
+        // const anv = nav.getElementsByTagName("a");
+        const aburger = document.getElementById("menu-icon");
+        // const aburger = burger.getElementsByTagName("a");
+        let i;
+        element.classList.toggle("dark-mode");
+        if (btn.innerHTML === '<i class="fas fa-moon"></i>') {
+          btn.innerHTML = '<i class="fas fa-sun"></i>';
+          footer.style.background="rgb(230, 230, 230)";
+          left.style.background="white";
+          aburger.style.color="black";
+          for (i=0; i < aleft.length; i++) {
+            aleft[i].style.color="rgb(0, 0, 0)";
+            afoot[i].style.color="black";
+            // anv[i].style.color="rgb(0, 0, 0)";
+            // aburger[i].style.color="rgb(0, 0, 0)";
+          }
+        }
+        else if (btn.innerHTML === '<i class="fas fa-sun"></i>') {
+          btn.innerHTML = '<i class="fas fa-moon"></i>';
+          footer.style.background="rgb(40, 40, 40)";
+          left.style.background="rgb(49, 49, 49)";
+          aburger.style.color="rgb(247, 247, 247)";
+          for (i=0; i < aleft.length; i++) {
+            aleft[i].style.color="rgb(247, 247, 247)";
+            afoot[i].style.color="white";
+            // anv[i].style.color="rgb(247, 247, 247)";
+            // aburger[i].style.color="rgb(247, 247, 247)";
+          }
+        }
+
+      }
+    </script>
+  </head>
+  <body>
+    <div class="sidenav" id="sidenav">
+      <a  class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#home" style="text-decoration: none; color:rgb(0, 0, 0)">Home</a>
+      <a href="#aboutme" style="text-decoration: none;color:rgb(0, 0, 0)">About Me</a>
+      <a href="#education" style="text-decoration: none;color:rgb(0, 0, 0)">Education</a>
+      <a href="#work" style="text-decoration: none;color:rgb(0, 0, 0)">Work Exp</a>
+      <a href="#contact" style="text-decoration: none;color:rgb(0, 0, 0)">Contact Me</a>
+    </div>
+    <!-- header -->
+    <div class="header" id="header">
+        <a  id="menu-icon" class="menu-icon" style="text-decoration: none; color:rgb(0, 0, 0);">
+          <span class="fa fa-bars" onclick="openNav()"></span>
+        </a>
+        <div class="header-left" id="header-left">
+          <a href="#home" style="text-decoration: none; color:rgb(0, 0, 0)">Home</a>
+          <a href="#aboutme" style="text-decoration: none;color:rgb(0, 0, 0)">About Me</a>
+          <a href="#education" style="text-decoration: none;color:rgb(0, 0, 0)">Education</a>
+          <a href="#work" style="text-decoration: none;color:rgb(0, 0, 0)">Work Exp</a>
+          <a href="#contact" style="text-decoration: none;color:rgb(0, 0, 0)">Contact Me</a>
+        </div>
+        <div class="header-right" id="header-right">
+          <button onclick="myFunction()" id="btndark" style="border: none; background: none; display: flex; font-size: 35px; margin-top: 10px;"><i class="fas fa-sun"></i></button>
+        </div>
+    </div>
+    
+    <!-- Home -->
+    <div class="home" id="home">
+        <div class="container">
+            <div class="d-flex">
+                <div class="caption mt-200" data-aos="fade-right">
+                    <h1>HI! I'M KHALID AL ASAD</h1>
+                    <h2>Back-End Developer</h2>
+                    <h3>The content of this website is about myself</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- about -->
+    <div class="aboutme" id="aboutme">
+        <div class="container">
+            <div class="d-flex">
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-right">
+                        <img src="img/1.jpg" alt="" style="margin-bottom: 10px;">
+                    </div>
+                    <div class="col-md-6">
+                        <h2>About Me</h2>
+                        <p>Hello, my name is Khalid Al Asad. I am a fresh graduate from IT major in Sumbawa Technology of University. Mainly focus in web programming with a background in JavaScript. HTML, PHP, MySQL, and framework Laravel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- education -->
+    <div class="education" id="education">
+        <div class="container">
+            <div class="d-flex">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Education</h2>
+                        <h3>SMK Negeri 1 Ngawi (2013 - 2016)</h3>
+                        <p>Computer and Network Engineering Computer</p>
+                        <h3>Sumbawa Technology of University (2016 - 2021)</h3>
+                        <p>Informatics Engineering</p>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-left">
+                        <img src="img/2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- work -->
+    <div class="work" id="work">
+        <div class="container">
+            <div class="d-flex">
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-right">
+                        <img src="img/3.jpg" alt="" style="margin-bottom: 10px;">
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Work Experience</h2>
+                        <h3>PT Erporate Solusi Global</h3>
+                        <p>Building a web-based Bootcamp application as a Back-End Developer. With a feature to CRUD a Bootcamp Events, CRUD Participants, and CRUD Masterdata Bootcamp. Built using framework Laravel and database MySQL.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact -->
+    <div class="contact" id="contact">
+        <div class="container">
+            <div class="d-flex">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form">
+                            <h2>Contact Me</h2>
+                            <label for="name">Nama</label>
+                            <input type="text" id="nama" required class="form-control" placeholder="Please insert your name">
+                            <label for="name">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="2" required class="form-control" placeholder="Let's collab!"></textarea>
+                            <span class="btn message" style="margin-bottom: 15px;">Send</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-left">
+                        <img src="img/4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer" id="footer">
+        <div class="footer-left">
+          <h3>Find me on</h3>
+            <a href="https://linkedin.com/in/khalidalasad" style="text-decoration: none; color: black;" target="blank"><span class="fab fa-linkedin"></span></a>
+            <a href="https://github.com/kholidasad" style="text-decoration: none; color: black;" target="blank"><span class="fab fa-github"></span></a>
+            <a href="https://instagram.com/kholidasad" style="text-decoration: none; color: black;" target="blank"><span class="fab fa-instagram"></span></a>
+          <p style="align-items: center; text-align: center;">Created by Khalid Al Asad</p>
+        </div>
+    </div>
+  </body>
+</html>
