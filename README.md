@@ -5,4 +5,4 @@ Here's the link for the website :
 https://kholidasad.github.io/self-introduction
 
 Bonus! and here's the link for the Calculator made by JavaScript : 
-
+https://kholidasad.github.io/JavaScript-Calculator/
